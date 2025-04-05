@@ -12,6 +12,8 @@ const Router = express.Router();
 const fs = require('fs');
 const path = require('path');
 const generateProfilePicture = require('../utils/functions');
+const crypto = require('crypto');
+const Crypto = crypto;
 
 Router.get("/", (req, res) => {
     if (!req.query.filename) {
