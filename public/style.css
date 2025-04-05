@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #00bfa5, #1de9b6);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+
+  p.description {
+    text-align: center;
+    font-size: 1rem;
+    max-width: 400px;
+    margin-bottom: 1.5rem;
+  }
+
+  form {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  label {
+    width: 100%;
+    margin: 15px 0 5px;
+    text-align: left;
+    color: #e6e6e6;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  button,
+  #preview {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  input[type="text"],
+  input[type="file"] {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #000;
+    border: none;
+  }
+
+  input[type="text"]:focus,
+  input[type="file"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px #00ffff;
+  }
+
+  button {
+    background: #004d40;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #00332b;
+  }
+
+  #preview {
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+  }
+
+  #preview img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff88;
+    object-fit: cover;
+  }
+
+  .footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.85rem;
+    opacity: 0.8;
+    padding-top: 20px;
+  }
