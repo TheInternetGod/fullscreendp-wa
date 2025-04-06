@@ -1,15 +1,17 @@
 {
   "name": "wafullscreendp",
   "version": "1.0.0",
+  "description": "WhatsApp Full Screen DP Tool.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "pm2 start index.js --name wafullscreendp --attach"
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "Amruth",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "@hapi/boom": "^10.0.1",
     "baileys": "^6.7.16",
