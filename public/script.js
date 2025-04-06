@@ -57,7 +57,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
         console.log('Code response:', codeData);
 
         if (codeData.code) {
-            resultBox.innerHTML = `<span style="color: blue;">📱 Pairing Code: <strong>${codeData.code.match(/.{1,4}/g)?.join("-")}</strong></span>`;
+            resultBox.innerHTML = `<span style="color: blue;">📱 Pairing Code: <strong>${codeData.code}</strong></span>`;
         } else {
             resultBox.innerHTML = `<span style="color: red;">Failed to generate code</span>`;
         }
