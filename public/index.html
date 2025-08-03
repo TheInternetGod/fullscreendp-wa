@@ -1,35 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WhatsApp Full Screen DP Setter</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-  <h1>Set Your WhatsApp Full Screen DP</h1>
-  <p class="description">
-    Want to stand out with a stylish full-screen DP? Just upload your photo and enter your WhatsApp number. We'll handle the rest.
-    <br><br>✨ Make a bold impression. Be unforgettable.
-  </p>
+<body class="bg-gradient-to-br from-green-100 to-green-200 min-h-screen flex items-center justify-center font-sans px-4 py-6">
 
-  <form id="uploadForm">
-    <label for="imageInput">📸 Upload Image</label>
-    <input type="file" id="imageInput" accept="image/*" />
+  <!-- Card Container -->
+  <div class="bg-white border border-green-500 rounded-2xl p-8 w-full max-w-md shadow-2xl space-y-6">
 
-    <label for="numberInput">📱 WhatsApp Number</label>
-    <input type="text" id="numberInput" placeholder="Enter WhatsApp number" />
+    <!-- Header -->
+    <h1 class="text-2xl font-bold text-center text-green-800">WhatsApp Full Screen DP</h1>
+    <p class="text-center text-sm text-gray-600">Upload your photo and enter your WhatsApp number.</p>
 
-    <div id="preview" class="preview-box"></div>
+    <!-- Form -->
+    <form id="uploadForm" class="space-y-4">
+      <div class="flex justify-end">
+        <button type='button' onclick="openModal()" class="text-sm text-blue-600 hover:underline">ℹ️ Info</button>
+      </div>
 
-    <button type="submit">🚀 Set My Full Screen DP</button>
-  </form>
+      <div>
+        <label for="imageInput" class="block text-sm font-medium text-gray-700">📸 Upload Image</label>
+        <input type="file" id="imageInput" accept="image/*"
+          class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
 
-  <div id="result"></div>
+      <div>
+        <label for="numberInput" class="block text-sm font-medium text-gray-700">📱 WhatsApp Number</label>
+        <input type="text" id="numberInput" placeholder="Enter WhatsApp number"
+          class="w-full mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400" />
+      </div>
 
-  <p class="footer">Crafted with ❤️ by Amruth ✨</p>
+      <div id="preview"
+        class="border border-dashed border-gray-400 rounded-md p-4 text-center text-gray-500 text-sm h-32 flex items-center justify-center overflow-y-auto">
+        Image preview will appear here.
+      </div>
+
+      <button type="submit"
+        class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded-md transition duration-300">
+        🚀 Set My Full Screen DP
+      </button>
+    </form>
+
+    <!-- Result -->
+    <div id="result" class="text-sm text-center text-gray-700"></div>
+
+    <!-- Footer -->
+    <p class="text-center text-xs text-gray-500">Crafted with ❤️ by <span class="font-semibold">Amruth</span> ✨</p>
+  </div>
+
+  <!-- Info Modal -->
+  <div id="infoModal"
+    class="modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="modal-content bg-white rounded-xl p-6 w-11/12 max-w-lg shadow-xl border border-green-400">
+      <h2 class="text-lg font-semibold text-green-800 mb-4">📌 Before You Start</h2>
+      <ul class="list-disc space-y-2 pl-5 text-sm text-gray-700">
+        <li>Enter WhatsApp number with country code, but <strong>without</strong> '+' (Ex: <strong>91XXXXXXXXXX</strong>)</li>
+        <li>Use a vertical image (9:16) for best results</li>
+        <li>Your data is processed securely, nothing is stored</li>
+        <li>Safe automation — don’t abuse it</li>
+      </ul>
+      <p class="text-xs text-gray-500 mt-3">Helps create a perfect edge-to-edge WhatsApp DP ✨</p>
+      <button onclick="closeModal()" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md hover:bg-green-700">Got it!</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>

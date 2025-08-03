@@ -67,3 +67,35 @@ document.getElementById('uploadForm').addEventListener('submit', async function 
         resultBox.innerHTML = `<span style="color: red;">Something went wrong. Try again.</span>`;
     }
 });
+
+
+window.onload = () => {
+    const modal = document.getElementById('infoModal');
+
+    const shown = sessionStorage.getItem('infoModalShown');
+
+    if (!shown) {
+        setTimeout(() => {
+            modal.style.display = 'flex'; // Show modal
+        }, 3000);
+    }
+};
+
+function closeModal() {
+    const modal = document.getElementById('infoModal');
+    modal.style.display = 'none';
+    sessionStorage.setItem('infoModalShown', 'true');
+}
+
+function openModal() {
+    document.getElementById('infoModal').style.display = 'flex';
+  }
+  
+  
+  window.addEventListener('click', function (e) {
+    const modal = document.getElementById('infoModal');
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+  

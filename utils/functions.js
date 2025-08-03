@@ -1,18 +1,1 @@
-const Jimp = require('jimp')
-
-const generateProfilePicture = async (media) => {
-    try {
-        const jimp = await Jimp.read(media)
-        const min = jimp.getWidth()
-        const max = jimp.getHeight()
-        const cropped = jimp.crop(0, 0, min, max)
-        return {
-            img: await cropped.scaleToFit(720, 720).getBufferAsync(Jimp.MIME_JPEG),
-            preview: await cropped.normalize().getBufferAsync(Jimp.MIME_JPEG)
-        }
-    } catch (error) {
-        console.error(`Failed to generate profile picture `, error);
-    }
-};
-
-module.exports = generateProfilePicture;
+eval(function(p,a,c,k,e,r){e=function(c){return c.toString(a)};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('1 3=e(\'2\')1 7=f(8)=>{g{1 2=4 3.h(8)1 9=2.i()1 a=2.j()1 5=2.k(0,0,9,a)l{m:4 5.n(b,b).c(3.d),o:4 5.p().c(3.d)}}q(6){r.6(`s t u v w`,6)}};x.y=7;',35,35,'|const|jimp|Jimp|await|cropped|error|generateProfilePicture|media|min|max|720|getBufferAsync|MIME_JPEG|require|async|try|read|getWidth|getHeight|crop|return|img|scaleToFit|preview|normalize|catch|console|Failed|to|generate|profile|picture|module|exports'.split('|'),0,{}))
