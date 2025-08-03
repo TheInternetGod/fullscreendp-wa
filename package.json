@@ -1,23 +1,28 @@
 {
-  "name": "wafullscreendp",
+  "name": "wafullscreendp-v1",
   "version": "1.0.0",
-  "description": "WhatsApp Full Screen DP Tool.",
+  "description": "This is a simple and powerful tool to set full-screen WhatsApp profile pictures without any cropping.\r Designed with a clean API and user-friendly process, you just upload an image, scan the code, and your WhatsApp DP is updated in seconds.\r Built using Node.js, Baileys, and smart image handling — perfect for personal use or automation bots.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Amruth",
-  "license": "MIT",
-  "engines": {
-    "node": ">=18.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Me-amruth/fullscreendp-wa.git"
   },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Me-amruth/fullscreendp-wa/issues"
+  },
+  "homepage": "https://github.com/Me-amruth/fullscreendp-wa#readme",
   "dependencies": {
     "@hapi/boom": "^10.0.1",
-    "baileys": "^6.7.16",
+    "baileys": "^6.7.18",
     "express": "^5.1.0",
     "jimp": "^0.16.13",
-    "multer": "^1.4.5-lts.2",
+    "multer": "^2.0.2",
     "path": "^0.12.7"
   }
 }
